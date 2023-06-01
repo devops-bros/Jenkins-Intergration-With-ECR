@@ -1,5 +1,5 @@
 # Pull base image 
-FROM 8.5.89-jre8-temurin-jammy 
+FROM 8.5.89-jre8
 
 # Maintainer 
 MAINTAINER "devops-bros@example.com" 

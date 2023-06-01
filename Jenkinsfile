@@ -17,7 +17,7 @@ pipeline {
                 steps{
                 withSonarQubeEnv('Sonarqube') {
             sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=devops-bros_geo-pipeline'
-                }
+            
         }
         stage('Code Build') {
             steps {

@@ -13,6 +13,11 @@ pipeline {
             steps{
                 git branch: 'main', url: 'https://github.com/devops-bros/Jenkins-Intergration-With-ECR.git'
             }
+            stage (Sonarqube scan) {
+                steps{
+                withSonarQubeEnv('sonar') {
+            sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=devops-bros_geo-pipeline'
+                }
         }
         stage('Code Build') {
             steps {
